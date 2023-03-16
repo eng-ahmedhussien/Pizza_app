@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class HomeVC: UIViewController {
     
-    var timer : Timer?
-    var currentSlideIndex = 0
+    let homeVM = HomeVM()
+    var disposeBag = DisposeBag()
+    
     @IBOutlet weak var sliderCollectionView : UICollectionView!{
         didSet{
             sliderCollectionView.dataSource = self
@@ -18,28 +21,26 @@ class HomeVC: UIViewController {
             sliderCollectionView.registerCell(cellClass:SliderCell.self)
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTimer()
+        homeVM.setupTimer()
+        binde()
+        
     }
     init(){
         super.init(nibName: "HomeVC", bundle: nil)
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupTimer(){
-        timer = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(moveToIndex), userInfo: nil, repeats: true)
+    func binde(){
+        homeVM.scrollToItemAtIndex.subscribe(onNext: { [weak self ] (index) in
+            self?.sliderCollectionView.scrollToItem(at: IndexPath(row: index, section: 0), at: .centeredHorizontally, animated: true)
+        }).disposed(by: disposeBag)
     }
     
-    @objc func moveToIndex(){
-        let nextSlide = currentSlideIndex+1
-        currentSlideIndex = nextSlide % 3
-        sliderCollectionView.scrollToItem(at: IndexPath(row: currentSlideIndex, section: 0), at: .centeredHorizontally, animated: true)
-    }
-
 }
 
 extension HomeVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{

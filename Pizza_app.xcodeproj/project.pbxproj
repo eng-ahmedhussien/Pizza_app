@@ -10,6 +10,7 @@
 		5BDB77009A12B11332AF7BFB /* Pods_Pizza_app_Pizza_appUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A77DEBE5E1EDAB865C971BC /* Pods_Pizza_app_Pizza_appUITests.framework */; };
 		DA221CD1D355581E349C142F /* Pods_Pizza_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAA03DD5133027F5C96CDB2 /* Pods_Pizza_app.framework */; };
 		DAE86D906C462C1D08811B4A /* Pods_Pizza_appTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D252DBE4346E2264C7D83A09 /* Pods_Pizza_appTests.framework */; };
+		FC108E2A29C340EC000DB3A5 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC108E2929C340EC000DB3A5 /* HomeVM.swift */; };
 		FCFDADC129BFD3CC00E76DE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFDADC029BFD3CC00E76DE9 /* AppDelegate.swift */; };
 		FCFDADCA29BFD3CF00E76DE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCFDADC929BFD3CF00E76DE9 /* Assets.xcassets */; };
 		FCFDADCD29BFD3CF00E76DE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCFDADCB29BFD3CF00E76DE9 /* LaunchScreen.storyboard */; };
@@ -52,6 +53,7 @@
 		B3048FC578862BBADADDB300 /* Pods-Pizza_appTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pizza_appTests.release.xcconfig"; path = "Target Support Files/Pods-Pizza_appTests/Pods-Pizza_appTests.release.xcconfig"; sourceTree = "<group>"; };
 		CBAA03DD5133027F5C96CDB2 /* Pods_Pizza_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pizza_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D252DBE4346E2264C7D83A09 /* Pods_Pizza_appTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pizza_appTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC108E2929C340EC000DB3A5 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		FCFDADBD29BFD3CC00E76DE9 /* Pizza_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pizza_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFDADC029BFD3CC00E76DE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCFDADC929BFD3CF00E76DE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,7 +111,6 @@
 				4427BE198F2B4845F7D2C86C /* Pods-Pizza_appTests.debug.xcconfig */,
 				B3048FC578862BBADADDB300 /* Pods-Pizza_appTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -214,6 +215,7 @@
 			children = (
 				FCFDADF129BFD79600E76DE9 /* HomeVC.xib */,
 				FCFDADF029BFD79600E76DE9 /* HomeVC.swift */,
+				FC108E2929C340EC000DB3A5 /* HomeVM.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -470,6 +472,7 @@
 			files = (
 				FCFDADF229BFD79600E76DE9 /* HomeVC.swift in Sources */,
 				FCFDADFD29BFE1FB00E76DE9 /* collectionView+Extention.swift in Sources */,
+				FC108E2A29C340EC000DB3A5 /* HomeVM.swift in Sources */,
 				FCFDADFF29BFE58D00E76DE9 /* UIView+Extentions.swift in Sources */,
 				FCFDAE0329BFED7C00E76DE9 /* RatingView.swift in Sources */,
 				FCFDADFA29BFE06600E76DE9 /* SliderCell.swift in Sources */,
