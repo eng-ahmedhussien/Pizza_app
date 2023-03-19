@@ -11,6 +11,9 @@
 		DA221CD1D355581E349C142F /* Pods_Pizza_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAA03DD5133027F5C96CDB2 /* Pods_Pizza_app.framework */; };
 		DAE86D906C462C1D08811B4A /* Pods_Pizza_appTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D252DBE4346E2264C7D83A09 /* Pods_Pizza_appTests.framework */; };
 		FC108E2A29C340EC000DB3A5 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC108E2929C340EC000DB3A5 /* HomeVM.swift */; };
+		FCF704D229C6714700DD4087 /* tableView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF704D129C6714700DD4087 /* tableView+Extention.swift */; };
+		FCF704D529C682DC00DD4087 /* PopularCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF704D329C682DB00DD4087 /* PopularCell.swift */; };
+		FCF704D629C682DC00DD4087 /* PopularCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCF704D429C682DB00DD4087 /* PopularCell.xib */; };
 		FCFDADC129BFD3CC00E76DE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFDADC029BFD3CC00E76DE9 /* AppDelegate.swift */; };
 		FCFDADCA29BFD3CF00E76DE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCFDADC929BFD3CF00E76DE9 /* Assets.xcassets */; };
 		FCFDADCD29BFD3CF00E76DE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCFDADCB29BFD3CF00E76DE9 /* LaunchScreen.storyboard */; };
@@ -54,6 +57,9 @@
 		CBAA03DD5133027F5C96CDB2 /* Pods_Pizza_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pizza_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D252DBE4346E2264C7D83A09 /* Pods_Pizza_appTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pizza_appTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC108E2929C340EC000DB3A5 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		FCF704D129C6714700DD4087 /* tableView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "tableView+Extention.swift"; sourceTree = "<group>"; };
+		FCF704D329C682DB00DD4087 /* PopularCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCell.swift; sourceTree = "<group>"; };
+		FCF704D429C682DB00DD4087 /* PopularCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCell.xib; sourceTree = "<group>"; };
 		FCFDADBD29BFD3CC00E76DE9 /* Pizza_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pizza_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFDADC029BFD3CC00E76DE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCFDADC929BFD3CF00E76DE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -124,6 +130,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FCF704D029C6710D00DD4087 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				FCFDAE0229BFED7C00E76DE9 /* RatingView.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		FCFDADB429BFD3CC00E76DE9 = {
 			isa = PBXGroup;
 			children = (
@@ -149,10 +163,10 @@
 		FCFDADBF29BFD3CC00E76DE9 /* Pizza_app */ = {
 			isa = PBXGroup;
 			children = (
-				FCFDAE0129BFED4A00E76DE9 /* Common */,
-				FCFDADF529BFDFF200E76DE9 /* Extentions */,
+				FCF704D029C6710D00DD4087 /* Utility */,
 				FCFDADF429BFDFE200E76DE9 /* Modules */,
-				FCFDADC929BFD3CF00E76DE9 /* Assets.xcassets */,
+				FCFDADF529BFDFF200E76DE9 /* Extentions */,
+				FCFDAE0129BFED4A00E76DE9 /* Common */,
 				FCFDADCE29BFD3CF00E76DE9 /* Info.plist */,
 			);
 			path = Pizza_app;
@@ -188,6 +202,7 @@
 			children = (
 				FCFDADFC29BFE1FB00E76DE9 /* collectionView+Extention.swift */,
 				FCFDADFE29BFE58D00E76DE9 /* UIView+Extentions.swift */,
+				FCF704D129C6714700DD4087 /* tableView+Extention.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -206,6 +221,8 @@
 			children = (
 				FCFDADF829BFE06600E76DE9 /* SliderCell.swift */,
 				FCFDADF929BFE06600E76DE9 /* SliderCell.xib */,
+				FCF704D329C682DB00DD4087 /* PopularCell.swift */,
+				FCF704D429C682DB00DD4087 /* PopularCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -213,8 +230,8 @@
 		FCFDAE0029BFED2E00E76DE9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FCFDADF129BFD79600E76DE9 /* HomeVC.xib */,
 				FCFDADF029BFD79600E76DE9 /* HomeVC.swift */,
+				FCFDADF129BFD79600E76DE9 /* HomeVC.xib */,
 				FC108E2929C340EC000DB3A5 /* HomeVM.swift */,
 			);
 			path = View;
@@ -225,7 +242,7 @@
 			children = (
 				FCFDADCB29BFD3CF00E76DE9 /* LaunchScreen.storyboard */,
 				FCFDADC029BFD3CC00E76DE9 /* AppDelegate.swift */,
-				FCFDAE0229BFED7C00E76DE9 /* RatingView.swift */,
+				FCFDADC929BFD3CF00E76DE9 /* Assets.xcassets */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -341,6 +358,7 @@
 			files = (
 				FCFDADCD29BFD3CF00E76DE9 /* LaunchScreen.storyboard in Resources */,
 				FCFDADF329BFD79600E76DE9 /* HomeVC.xib in Resources */,
+				FCF704D629C682DC00DD4087 /* PopularCell.xib in Resources */,
 				FCFDADFB29BFE06600E76DE9 /* SliderCell.xib in Resources */,
 				FCFDADCA29BFD3CF00E76DE9 /* Assets.xcassets in Resources */,
 			);
@@ -470,11 +488,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCF704D229C6714700DD4087 /* tableView+Extention.swift in Sources */,
 				FCFDADF229BFD79600E76DE9 /* HomeVC.swift in Sources */,
 				FCFDADFD29BFE1FB00E76DE9 /* collectionView+Extention.swift in Sources */,
 				FC108E2A29C340EC000DB3A5 /* HomeVM.swift in Sources */,
 				FCFDADFF29BFE58D00E76DE9 /* UIView+Extentions.swift in Sources */,
 				FCFDAE0329BFED7C00E76DE9 /* RatingView.swift in Sources */,
+				FCF704D529C682DC00DD4087 /* PopularCell.swift in Sources */,
 				FCFDADFA29BFE06600E76DE9 /* SliderCell.swift in Sources */,
 				FCFDADC129BFD3CC00E76DE9 /* AppDelegate.swift in Sources */,
 			);

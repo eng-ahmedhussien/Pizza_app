@@ -26,7 +26,7 @@ class RatingView: UIView {
     required init? (coder: NSCoder) {
         super.init (coder: coder)
         setupUI ( )
-        setupRating(rating: 3)
+      //  setupRating(rating: 3 , style: .compact)
     }
     
     func setupUI ( ) {
@@ -38,20 +38,30 @@ class RatingView: UIView {
         stackView.trailingAnchor.constraint (equalTo: self.trailingAnchor).isActive = true
     }
     
-    func setupRating(rating:Int){
-        if rating > 0 {
-            for _ in 1...rating{
-                let image = genrateStarView(staretype: .fill)
-                stackView.addArrangedSubview(image)
+    func setupRating(rating:Int,style:style = .fill){
+        
+        switch style{
+            
+        case .fill:
+            if rating > 0 {
+                for _ in 1...rating{
+                    let image = genrateStarView(staretype: .fill)
+                    stackView.addArrangedSubview(image)
+                }
             }
-        }
-        let nofill  = maximumRating - rating
-        if nofill > 0 {
-            for _ in 1...nofill{
-                let image = genrateStarView(staretype: .nonfill)
-                stackView.addArrangedSubview(image)
+            let nofill  = maximumRating - rating
+            if nofill > 0 {
+                for _ in 1...nofill{
+                    let image = genrateStarView(staretype: .nonfill)
+                    stackView.addArrangedSubview(image)
+                }
             }
+        case .compact:
+            let image = genrateStarView(staretype: .fill)
+            stackView.addArrangedSubview(image)
         }
+        
+        
         
     }
     
@@ -59,14 +69,16 @@ class RatingView: UIView {
         let starImage: UIImage
         
         switch staretype{
+            
         case .fill:
             starImage = UIImage(named: "fillstar")!
         case .nonfill:
             starImage = UIImage(named: "star")!
         }
+        
         let image = UIImageView (image: starImage)
         image.contentMode = .scaleAspectFill
-        image.widthAnchor.constraint (lessThanOrEqualToConstant: 10).isActive = true
+        image.widthAnchor.constraint(equalToConstant: 10).isActive = true
         return image
     }
 
@@ -74,6 +86,10 @@ class RatingView: UIView {
     enum starType{
         case fill
         case nonfill
+    }
+    enum style{
+        case fill
+        case compact
     }
     
 }
