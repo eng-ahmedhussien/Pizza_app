@@ -25,10 +25,14 @@ class HomeVC: UIViewController {
     @IBOutlet weak var popularTableView: UITableView!{
         didSet{
             popularTableView.rowHeight = 100
+            
             popularTableView.rx.setDelegate(self).disposed(by: disposeBag)
+            
             homeVM.popularItems.asObservable().bind(to: popularTableView.rx.items(cellIdentifier: String(describing:PopularCell.self),cellType: PopularCell.self)){index,model,cell in
                 cell.ratingView.setupRating(rating: 3,style: .compact)
             }.disposed(by: disposeBag)
+            
+            
             popularTableView.registerCellNib(cellClass: PopularCell.self)
         }
     }
