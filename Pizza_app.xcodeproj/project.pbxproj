@@ -13,6 +13,10 @@
 		FC07664729C9647600E6BF5D /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC07664629C9647600E6BF5D /* CustomTabBar.swift */; };
 		FC07664C29C96CF800E6BF5D /* CustomTablBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC07664B29C96CF800E6BF5D /* CustomTablBarController.swift */; };
 		FC108E2A29C340EC000DB3A5 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC108E2929C340EC000DB3A5 /* HomeVM.swift */; };
+		FC48478229CC720F008631D9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC48478129CC720F008631D9 /* AppCoordinator.swift */; };
+		FCBDDDB529CC7920001222F0 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBDDDB429CC7920001222F0 /* Navigator.swift */; };
+		FCBDDDB729CC79B3001222F0 /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBDDDB629CC79B3001222F0 /* MainNavigator.swift */; };
+		FCBDDDB929CC8AD8001222F0 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBDDDB829CC8AD8001222F0 /* BaseWireframe.swift */; };
 		FCF704D229C6714700DD4087 /* tableView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF704D129C6714700DD4087 /* tableView+Extention.swift */; };
 		FCF704D529C682DC00DD4087 /* PopularCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF704D329C682DB00DD4087 /* PopularCell.swift */; };
 		FCF704D629C682DC00DD4087 /* PopularCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCF704D429C682DB00DD4087 /* PopularCell.xib */; };
@@ -61,6 +65,10 @@
 		FC07664629C9647600E6BF5D /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		FC07664B29C96CF800E6BF5D /* CustomTablBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTablBarController.swift; sourceTree = "<group>"; };
 		FC108E2929C340EC000DB3A5 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		FC48478129CC720F008631D9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		FCBDDDB429CC7920001222F0 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		FCBDDDB629CC79B3001222F0 /* MainNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
+		FCBDDDB829CC8AD8001222F0 /* BaseWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
 		FCF704D129C6714700DD4087 /* tableView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "tableView+Extention.swift"; sourceTree = "<group>"; };
 		FCF704D329C682DB00DD4087 /* PopularCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCell.swift; sourceTree = "<group>"; };
 		FCF704D429C682DB00DD4087 /* PopularCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCell.xib; sourceTree = "<group>"; };
@@ -134,20 +142,56 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FC07664829C96C2800E6BF5D /* TabBare */ = {
+		FC07664829C96C2800E6BF5D /* CustomTabBare */ = {
 			isa = PBXGroup;
 			children = (
 				FC07664629C9647600E6BF5D /* CustomTabBar.swift */,
 				FC07664B29C96CF800E6BF5D /* CustomTablBarController.swift */,
 			);
-			path = TabBare;
+			path = CustomTabBare;
+			sourceTree = "<group>";
+		};
+		FC48477F29CC6B83008631D9 /* RatingView */ = {
+			isa = PBXGroup;
+			children = (
+				FCFDAE0229BFED7C00E76DE9 /* RatingView.swift */,
+			);
+			path = RatingView;
+			sourceTree = "<group>";
+		};
+		FC48478029CC6B92008631D9 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				FC48478129CC720F008631D9 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		FC48478329CC7378008631D9 /* Navicators */ = {
+			isa = PBXGroup;
+			children = (
+				FCBDDDB629CC79B3001222F0 /* MainNavigator.swift */,
+			);
+			path = Navicators;
+			sourceTree = "<group>";
+		};
+		FC48478429CC7392008631D9 /* NavigatorProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				FCBDDDB429CC7920001222F0 /* Navigator.swift */,
+			);
+			path = NavigatorProtocol;
 			sourceTree = "<group>";
 		};
 		FCF704D029C6710D00DD4087 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				FC07664829C96C2800E6BF5D /* TabBare */,
-				FCFDAE0229BFED7C00E76DE9 /* RatingView.swift */,
+				FC48478029CC6B92008631D9 /* Coordinator */,
+				FC48478429CC7392008631D9 /* NavigatorProtocol */,
+				FC48478329CC7378008631D9 /* Navicators */,
+				FC48477F29CC6B83008631D9 /* RatingView */,
+				FC07664829C96C2800E6BF5D /* CustomTabBare */,
+				FCBDDDB829CC8AD8001222F0 /* BaseWireframe.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -502,8 +546,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCBDDDB729CC79B3001222F0 /* MainNavigator.swift in Sources */,
+				FC48478229CC720F008631D9 /* AppCoordinator.swift in Sources */,
 				FCF704D229C6714700DD4087 /* tableView+Extention.swift in Sources */,
+				FCBDDDB929CC8AD8001222F0 /* BaseWireframe.swift in Sources */,
 				FCFDADF229BFD79600E76DE9 /* HomeVC.swift in Sources */,
+				FCBDDDB529CC7920001222F0 /* Navigator.swift in Sources */,
 				FC07664729C9647600E6BF5D /* CustomTabBar.swift in Sources */,
 				FCFDADFD29BFE1FB00E76DE9 /* collectionView+Extention.swift in Sources */,
 				FC07664C29C96CF800E6BF5D /* CustomTablBarController.swift in Sources */,

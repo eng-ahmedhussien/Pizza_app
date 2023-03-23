@@ -9,15 +9,17 @@ import UIKit
 
 class CustomTablBarController: UITabBarController {
     
-    lazy var middleButton: UIButton = {
-        let middleButton = UIButton()
-        middleButton.setImage(UIImage(systemName: "cart"), for: .normal)
-        middleButton.backgroundColor = .red
-        middleButton.layer.cornerRadius = 35
-       // middleButton.imageEdgeInsets = .init(top:10, left: 0, bottom: 0, right: 0)
-        return middleButton
-    }()
-
+    var coordinator: AppCoordinator
+    
+    init(coordinator: AppCoordinator) {
+        self.coordinator = coordinator
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setValue(CustomTabBar(), forKey: "tabBar")
@@ -26,6 +28,14 @@ class CustomTablBarController: UITabBarController {
         
     }
    
+    lazy var middleButton: UIButton = {
+        let middleButton = UIButton()
+        middleButton.setImage(UIImage(systemName: "cart"), for: .normal)
+        middleButton.backgroundColor = .red
+        middleButton.layer.cornerRadius = 35
+       // middleButton.imageEdgeInsets = .init(top:10, left: 0, bottom: 0, right: 0)
+        return middleButton
+    }()
     
     func createMiddleButton(){
         self.tabBar.addSubview(middleButton)
@@ -59,7 +69,7 @@ class CustomTablBarController: UITabBarController {
     func setupTabBarViewControllers(){
         
         self.viewControllers = tabBarItems.allCases.map({
-            return viewControllerInTabBar(item: $0)
+            return viewControllersInTabBar(item: $0)
         })
         
         tabBar.items?[tabBarItems.pizzaMaker.rawValue].isEnabled = false
@@ -70,19 +80,18 @@ class CustomTablBarController: UITabBarController {
         
     }
     
-    func viewControllerInTabBar(item:tabBarItems)->UIViewController{
+    func viewControllersInTabBar(item:tabBarItems)->UIViewController{
         switch item{
         case .Home:
-            let vc = HomeVC()
+            let vc = coordinator.mainNavigator.navigate(to: .Home) //HomeVC()
             vc.tabBarItem = setupViewControllerInTabBar(item:item)
-            //vc.tabBarItem = .init(title: "Home", image: UIImage(systemName: "homekit"), selectedImage: UIImage(systemName: "homekit"))
             return vc
         case .pizzaMaker:
             let vc = HomeVC()
            // vc.tabBarItem = setupViewControllerInTabBar(item:item)
             return vc
         case .cart:
-            let vc = HomeVC()
+            let vc = coordinator.mainNavigator.navigate(to: .Home)
             vc.tabBarItem = setupViewControllerInTabBar(item:item)
             return vc
         }
