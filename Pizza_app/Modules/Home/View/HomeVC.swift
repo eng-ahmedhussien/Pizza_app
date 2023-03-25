@@ -13,6 +13,10 @@ class HomeVC: UIViewController {
     
     let homeVM = HomeVM()
     var disposeBag = DisposeBag()
+    var coordinator: AppCoordinator
+    
+    
+    
     
     @IBOutlet weak var sliderCollectionView : UICollectionView!{
         didSet{
@@ -43,7 +47,8 @@ class HomeVC: UIViewController {
         binde()
         
     }
-    init(){
+    init(coordinator:AppCoordinator){
+        self.coordinator = coordinator
         super.init(nibName: "HomeVC", bundle: nil)
     }
     required init?(coder: NSCoder) {
@@ -55,23 +60,6 @@ class HomeVC: UIViewController {
             self?.sliderCollectionView.scrollToItem(at: IndexPath(row: index, section: 0), at: .centeredHorizontally, animated: true)
         }).disposed(by: disposeBag)
         
-        
-//        popularTableView.rx.setDelegate(self).disposed(by: disposeBag)
-////        homeVM.popularItems.asObservable().bind(to: popularTableView.rx.items(cellIdentifier: String(describing:PopularCell.self),cellType: PopularCell.self)){index,model,cell in
-////
-////        }.disposed(by: disposeBag)
-//
-//
-//        homeVM.popularItems.bind(to: popularTableView.rx.items(cellIdentifier: String(describing:PopularCell.self),cellType: PopularCell.self)){index,model,cell in
-//
-//        }.disposed(by: disposeBag)
-//
-
-        
-        //        homeVM.slides.subscribe { [weak self] (numberOfSlide) in
-        //            <#code#>
-        //        }
-        //
     }
 }
 
@@ -84,6 +72,11 @@ extension HomeVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollectio
         let cell = sliderCollectionView.dequeue(indexPath: indexPath) as SliderCell
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return sliderCollectionView.bounds.size
     }

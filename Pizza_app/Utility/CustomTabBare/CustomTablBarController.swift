@@ -9,13 +9,13 @@ import UIKit
 
 class CustomTablBarController: UITabBarController {
     
-    var coordinator: AppCoordinator
-    
+   
+    var coordinator : AppCoordinator
     init(coordinator: AppCoordinator) {
         self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -56,8 +56,10 @@ class CustomTablBarController: UITabBarController {
     }
     
     @objc func action(_ sender:UIButton){
+        
+        
+        coordinator.mainNavigator.navigate(to: .Home,with: .push)
         sender.backgroundColor = .blue
-        //print("button cliced ")
     }
     
     enum tabBarItems:Int,CaseIterable{
@@ -67,9 +69,10 @@ class CustomTablBarController: UITabBarController {
     }
     
     func setupTabBarViewControllers(){
-        
         self.viewControllers = tabBarItems.allCases.map({
-            return viewControllersInTabBar(item: $0)
+            let vc = viewControllersInTabBar(item: $0)
+            let navigation  = UINavigationController(rootViewController: vc)
+            return navigation //viewControllersInTabBar(item: $0)
         })
         
         tabBar.items?[tabBarItems.pizzaMaker.rawValue].isEnabled = false
@@ -83,15 +86,15 @@ class CustomTablBarController: UITabBarController {
     func viewControllersInTabBar(item:tabBarItems)->UIViewController{
         switch item{
         case .Home:
-            let vc = coordinator.mainNavigator.navigate(to: .Home) //HomeVC()
+            let vc = HomeVC(coordinator: coordinator)
             vc.tabBarItem = setupViewControllerInTabBar(item:item)
             return vc
         case .pizzaMaker:
-            let vc = HomeVC()
+            let vc = HomeVC(coordinator: coordinator)
            // vc.tabBarItem = setupViewControllerInTabBar(item:item)
             return vc
         case .cart:
-            let vc = coordinator.mainNavigator.navigate(to: .Home)
+            let vc = HomeVC(coordinator: coordinator)
             vc.tabBarItem = setupViewControllerInTabBar(item:item)
             return vc
         }

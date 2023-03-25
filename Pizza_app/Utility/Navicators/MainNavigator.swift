@@ -9,15 +9,25 @@ import Foundation
 import UIKit
 
 class MainNavigator : Navigator{
+   
+    var coordinator: AppCoordinator
+    
+    required init(coordinator: AppCoordinator) {
+        self.coordinator = coordinator
+    }
     
     enum Destination{
         case Home
     }
-    
-    func navigate(to destination: Destination)->UIViewController {
+
+    func makeViewController(for destination: Destination) -> UIViewController {
         switch destination.self{
         case .Home :
-            return HomeVC()
+            let vc = HomeVC(coordinator: coordinator)
+          //  vc.coordinator  = coordinator
+            return vc
         }
     }
+    
+
 }
