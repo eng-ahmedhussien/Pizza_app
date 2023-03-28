@@ -143,11 +143,19 @@
 			path = TabBare;
 			sourceTree = "<group>";
 		};
+		FC4BC10F29D33BF70068749D /* Ratingview */ = {
+			isa = PBXGroup;
+			children = (
+				FCFDAE0229BFED7C00E76DE9 /* RatingView.swift */,
+			);
+			path = Ratingview;
+			sourceTree = "<group>";
+		};
 		FCF704D029C6710D00DD4087 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				FC4BC10F29D33BF70068749D /* Ratingview */,
 				FC07664829C96C2800E6BF5D /* TabBare */,
-				FCFDAE0229BFED7C00E76DE9 /* RatingView.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";

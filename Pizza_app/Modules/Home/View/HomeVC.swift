@@ -88,5 +88,9 @@ extension HomeVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollectio
         return sliderCollectionView.bounds.size
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath)
+    }
+    
 }
 
