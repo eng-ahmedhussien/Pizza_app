@@ -27,9 +27,6 @@ class AppCoordinator{
         return nil
     }
     
-    var rootViewController : UIViewController{
-        return tabBar//CustomTablBarController(coordinator: self)
-    }
     
     init(window: UIWindow = UIWindow()) {
         self.window = window
@@ -37,6 +34,9 @@ class AppCoordinator{
     func start(){
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
+    }
+    var rootViewController : UIViewController{
+        return tabBar//CustomTablBarController(coordinator: self)
     }
     
 }

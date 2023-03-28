@@ -15,9 +15,6 @@ class HomeVC: UIViewController {
     var disposeBag = DisposeBag()
     var coordinator: AppCoordinator
     
-    
-    
-    
     @IBOutlet weak var sliderCollectionView : UICollectionView!{
         didSet{
             sliderCollectionView.dataSource = self
@@ -26,25 +23,13 @@ class HomeVC: UIViewController {
         }
     }
     
-    @IBOutlet weak var popularTableView: UITableView!{
-        didSet{
-            popularTableView.rowHeight = 100
-            
-            popularTableView.rx.setDelegate(self).disposed(by: disposeBag)
-            
-            homeVM.popularItems.asObservable().bind(to: popularTableView.rx.items(cellIdentifier: String(describing:PopularCell.self),cellType: PopularCell.self)){index,model,cell in
-                cell.ratingView.setupRating(rating: 3,style: .compact)
-            }.disposed(by: disposeBag)
-            
-            
-            popularTableView.registerCellNib(cellClass: PopularCell.self)
-        }
-    }
+    @IBOutlet weak var popularTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         homeVM.setupTimer()
         binde()
+        setupPopularTableView()
         
     }
     init(coordinator:AppCoordinator){
@@ -61,6 +46,32 @@ class HomeVC: UIViewController {
         }).disposed(by: disposeBag)
         
     }
+    
+    func setupPopularTableView(){
+        
+        popularTableView.rx.setDelegate(self).disposed(by: disposeBag)
+        
+        // !must write cell type
+        homeVM.popularItems.asObservable().bind(to: popularTableView.rx.items(cellIdentifier: String(describing:PopularCell.self),cellType: PopularCell.self)){index,model,cell in
+            cell.ratingView.setupRating(rating: 3,style: .compact)
+        }.disposed(by: disposeBag)
+        
+        popularTableView.rx.modelSelected(Product.self).subscribe { [weak self] (product) in
+            guard let self = self else {return}
+            
+            self.coordinator.mainNavigator.navigate(to: .ItemDetails(Product: product), with: .present)
+        }.disposed(by: disposeBag)
+        
+//            popularTableView.rx.itemSelected.subscribe { [weak self] (indexSelected) in
+//                guard self != nil else {return}
+//                coordinator.mainNavigator.navigate(to: .ItemDetails(Product: indexSelected.), with: .present)
+//                print(indexSelected)
+//            }.disposed(by: disposeBag)
+        
+        //ui
+        popularTableView.registerCellNib(cellClass: PopularCell.self)
+        popularTableView.rowHeight = 100
+    }
 }
 
 extension HomeVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
@@ -74,7 +85,7 @@ extension HomeVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        print("slected")
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

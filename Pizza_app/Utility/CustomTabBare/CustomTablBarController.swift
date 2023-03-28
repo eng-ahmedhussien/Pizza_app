@@ -9,13 +9,23 @@ import UIKit
 
 class CustomTablBarController: UITabBarController {
     
-   
     var coordinator : AppCoordinator
+    lazy var middleButton: UIButton = {
+        let middleButton = UIButton()
+        middleButton.setImage(UIImage(named: "20395188"), for: .normal)
+        middleButton.contentMode = .center
+        middleButton.backgroundColor = .red
+        middleButton.layer.cornerRadius = 35
+        middleButton.borderColor = .black
+        middleButton.borderWidth = 3
+       // middleButton.imageEdgeInsets = .init(top:10, left: 0, bottom: 0, right: 0)
+        return middleButton
+    }()
+    
     init(coordinator: AppCoordinator) {
         self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
     }
-
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -28,15 +38,6 @@ class CustomTablBarController: UITabBarController {
         
     }
    
-    lazy var middleButton: UIButton = {
-        let middleButton = UIButton()
-        middleButton.setImage(UIImage(systemName: "cart"), for: .normal)
-        middleButton.backgroundColor = .red
-        middleButton.layer.cornerRadius = 35
-       // middleButton.imageEdgeInsets = .init(top:10, left: 0, bottom: 0, right: 0)
-        return middleButton
-    }()
-    
     func createMiddleButton(){
         self.tabBar.addSubview(middleButton)
         
@@ -56,8 +57,6 @@ class CustomTablBarController: UITabBarController {
     }
     
     @objc func action(_ sender:UIButton){
-        
-        
         coordinator.mainNavigator.navigate(to: .Home,with: .push)
         sender.backgroundColor = .blue
     }
