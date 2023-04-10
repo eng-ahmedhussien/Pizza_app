@@ -32,6 +32,6 @@ class MainNavigator : Navigator{
             return vc
         }
     }
-    
+
 
 }

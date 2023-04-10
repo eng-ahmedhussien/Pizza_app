@@ -10,10 +10,7 @@ import UIKit
 
 class RatingView: UIView {
     
-    //MARK: UI Private Configurations
     private let maximumRating = 5
-    
-    //MARK: UI Public Configurations var rating
     var rating: Int = 5
     
     lazy var stackView: UIStackView = {
@@ -26,7 +23,6 @@ class RatingView: UIView {
     required init? (coder: NSCoder) {
         super.init (coder: coder)
         setupUI ( )
-      //  setupRating(rating: 3 , style: .compact)
     }
     
     func setupUI ( ) {

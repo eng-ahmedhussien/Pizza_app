@@ -45,28 +45,26 @@ class HomeVC: UIViewController {
             self?.sliderCollectionView.scrollToItem(at: IndexPath(row: index, section: 0), at: .centeredHorizontally, animated: true)
         }).disposed(by: disposeBag)
         
+        homeVM.navigateToItemDetails.subscribe { [weak self ] (product) in
+            guard let self = self else {return}
+            self.coordinator.mainNavigator.navigate(to: .ItemDetails(Product: product), with: .present)
+        }.disposed(by: disposeBag)
+        
     }
     
     func setupPopularTableView(){
         
         popularTableView.rx.setDelegate(self).disposed(by: disposeBag)
         
-        // !must write cell type
+        //MARK: !must write cell type
         homeVM.popularItems.asObservable().bind(to: popularTableView.rx.items(cellIdentifier: String(describing:PopularCell.self),cellType: PopularCell.self)){index,model,cell in
             cell.ratingView.setupRating(rating: 3,style: .compact)
         }.disposed(by: disposeBag)
         
-        popularTableView.rx.modelSelected(Product.self).subscribe { [weak self] (product) in
-            guard let self = self else {return}
-            
-            self.coordinator.mainNavigator.navigate(to: .ItemDetails(Product: product), with: .present)
+        popularTableView.rx.itemSelected.subscribe { [weak self] (indexSelected) in
+            guard let self = self, let indexSelected = indexSelected.element else { return}
+            self.homeVM.didselctedIndex(indexSelected: indexSelected)
         }.disposed(by: disposeBag)
-        
-//            popularTableView.rx.itemSelected.subscribe { [weak self] (indexSelected) in
-//                guard self != nil else {return}
-//                coordinator.mainNavigator.navigate(to: .ItemDetails(Product: indexSelected.), with: .present)
-//                print(indexSelected)
-//            }.disposed(by: disposeBag)
         
         //ui
         popularTableView.registerCellNib(cellClass: PopularCell.self)
@@ -74,6 +72,7 @@ class HomeVC: UIViewController {
     }
 }
 
+//MARK: - collection view
 extension HomeVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3

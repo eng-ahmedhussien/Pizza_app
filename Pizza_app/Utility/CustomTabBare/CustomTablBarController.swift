@@ -38,28 +38,7 @@ class CustomTablBarController: UITabBarController {
         
     }
    
-    func createMiddleButton(){
-        self.tabBar.addSubview(middleButton)
-        
-        middleButton.addTarget(self, action: #selector(action(_:)), for: .touchUpInside)
-        
-        //MARK: constrians
-        //to add constrinas programtly must write  button.translatesAutoresizingMaskIntoConstraints=false
-        middleButton.translatesAutoresizingMaskIntoConstraints=false
-        
-        NSLayoutConstraint.activate([
-            middleButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            middleButton.widthAnchor.constraint(equalToConstant:70),
-            middleButton.heightAnchor.constraint(equalToConstant:70),
-            //middleButton.bottomAnchor.constraint(equalTo: tabBar.bottomAnchor, constant: -60)
-            middleButton.topAnchor.constraint(equalTo: tabBar.bottomAnchor,constant: -125)
-        ])
-    }
     
-    @objc func action(_ sender:UIButton){
-        coordinator.mainNavigator.navigate(to: .Home,with: .push)
-        sender.backgroundColor = .blue
-    }
     
     enum tabBarItems:Int,CaseIterable{
         case Home
@@ -102,7 +81,6 @@ class CustomTablBarController: UITabBarController {
     private func setupViewControllerInTabBar(item:tabBarItems)->UITabBarItem{
         //An object that describes an item in a tab bar.
         var tabBarItem :UITabBarItem
-        
         switch item{
         case .Home:
             tabBarItem = .init(title: "Home", image: UIImage(systemName: "homekit"), selectedImage: UIImage(systemName: "homekit"))
@@ -116,10 +94,30 @@ class CustomTablBarController: UITabBarController {
         tabBarItem.imageInsets = .init(top: 10, left: 0, bottom: -10, right: 0)
         return tabBarItem
     }
+}
+//MARK: - createMiddleButton
+extension CustomTablBarController{
     
-       
-
+    func createMiddleButton(){
+        self.tabBar.addSubview(middleButton)
+        
+        middleButton.addTarget(self, action: #selector(action(_:)), for: .touchUpInside)
+        
+        //MARK: constrians
+        //to add constrinas programtly must write  button.translatesAutoresizingMaskIntoConstraints=false
+        middleButton.translatesAutoresizingMaskIntoConstraints=false
+        
+        NSLayoutConstraint.activate([
+            middleButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            middleButton.widthAnchor.constraint(equalToConstant:70),
+            middleButton.heightAnchor.constraint(equalToConstant:70),
+            //middleButton.bottomAnchor.constraint(equalTo: tabBar.bottomAnchor, constant: -60)
+            middleButton.topAnchor.constraint(equalTo: tabBar.bottomAnchor,constant: -125)
+        ])
+    }
     
-    
-
+    @objc func action(_ sender:UIButton){
+        coordinator.mainNavigator.navigate(to: .Home,with: .push)
+        sender.backgroundColor = .blue
+    }
 }

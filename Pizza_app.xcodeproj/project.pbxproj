@@ -10,9 +10,23 @@
 		5BDB77009A12B11332AF7BFB /* Pods_Pizza_app_Pizza_appUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A77DEBE5E1EDAB865C971BC /* Pods_Pizza_app_Pizza_appUITests.framework */; };
 		DA221CD1D355581E349C142F /* Pods_Pizza_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAA03DD5133027F5C96CDB2 /* Pods_Pizza_app.framework */; };
 		DAE86D906C462C1D08811B4A /* Pods_Pizza_appTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D252DBE4346E2264C7D83A09 /* Pods_Pizza_appTests.framework */; };
+		FC07077129E43AE400428BE4 /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC07077029E43AE400428BE4 /* OptionsView.swift */; };
+		FC07077329E43AFB00428BE4 /* OptionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC07077229E43AFB00428BE4 /* OptionsView.xib */; };
+		FC07077529E43C2F00428BE4 /* NibLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC07077429E43C2F00428BE4 /* NibLoadingView.swift */; };
+		FC07077A29E43E7600428BE4 /* QuantityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC07077929E43E7600428BE4 /* QuantityView.swift */; };
+		FC07077C29E43E8500428BE4 /* QuantityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC07077B29E43E8500428BE4 /* QuantityView.xib */; };
+		FC07077E29E43EFA00428BE4 /* PIZZATextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC07077D29E43EFA00428BE4 /* PIZZATextView.swift */; };
+		FC07078029E43F0F00428BE4 /* PIZZATextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC07077F29E43F0F00428BE4 /* PIZZATextView.xib */; };
+		FC07078229E43F3600428BE4 /* SizesSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC07078129E43F3600428BE4 /* SizesSelectorView.swift */; };
+		FC07078429E43F7D00428BE4 /* SizesSelectorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC07078329E43F7D00428BE4 /* SizesSelectorView.xib */; };
+		FC07078829E445BD00428BE4 /* SizeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC07078629E445BD00428BE4 /* SizeItemCell.swift */; };
+		FC07078929E445BD00428BE4 /* SizeItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC07078729E445BD00428BE4 /* SizeItemCell.xib */; };
+		FC07078D29E44D7400428BE4 /* SizesSelectorVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC07078C29E44D7400428BE4 /* SizesSelectorVM.swift */; };
 		FC07664729C9647600E6BF5D /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC07664629C9647600E6BF5D /* CustomTabBar.swift */; };
 		FC07664C29C96CF800E6BF5D /* CustomTablBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC07664B29C96CF800E6BF5D /* CustomTablBarController.swift */; };
 		FC108E2A29C340EC000DB3A5 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC108E2929C340EC000DB3A5 /* HomeVM.swift */; };
+		FC1FF34929D45E8600A0947A /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1FF34729D45E8600A0947A /* CartVC.swift */; };
+		FC1FF34A29D45E8600A0947A /* CartVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC1FF34829D45E8600A0947A /* CartVC.xib */; };
 		FC48478229CC720F008631D9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC48478129CC720F008631D9 /* AppCoordinator.swift */; };
 		FCA0EF6F29D3052200DB682B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA0EF6E29D3052200DB682B /* Product.swift */; };
 		FCA0EF7229D30E8100DB682B /* ItemDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA0EF7129D30E8100DB682B /* ItemDetailsVM.swift */; };
@@ -66,9 +80,23 @@
 		B3048FC578862BBADADDB300 /* Pods-Pizza_appTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pizza_appTests.release.xcconfig"; path = "Target Support Files/Pods-Pizza_appTests/Pods-Pizza_appTests.release.xcconfig"; sourceTree = "<group>"; };
 		CBAA03DD5133027F5C96CDB2 /* Pods_Pizza_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pizza_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D252DBE4346E2264C7D83A09 /* Pods_Pizza_appTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pizza_appTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC07077029E43AE400428BE4 /* OptionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
+		FC07077229E43AFB00428BE4 /* OptionsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionsView.xib; sourceTree = "<group>"; };
+		FC07077429E43C2F00428BE4 /* NibLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadingView.swift; sourceTree = "<group>"; };
+		FC07077929E43E7600428BE4 /* QuantityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityView.swift; sourceTree = "<group>"; };
+		FC07077B29E43E8500428BE4 /* QuantityView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuantityView.xib; sourceTree = "<group>"; };
+		FC07077D29E43EFA00428BE4 /* PIZZATextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIZZATextView.swift; sourceTree = "<group>"; };
+		FC07077F29E43F0F00428BE4 /* PIZZATextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PIZZATextView.xib; sourceTree = "<group>"; };
+		FC07078129E43F3600428BE4 /* SizesSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizesSelectorView.swift; sourceTree = "<group>"; };
+		FC07078329E43F7D00428BE4 /* SizesSelectorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SizesSelectorView.xib; sourceTree = "<group>"; };
+		FC07078629E445BD00428BE4 /* SizeItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeItemCell.swift; sourceTree = "<group>"; };
+		FC07078729E445BD00428BE4 /* SizeItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SizeItemCell.xib; sourceTree = "<group>"; };
+		FC07078C29E44D7400428BE4 /* SizesSelectorVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizesSelectorVM.swift; sourceTree = "<group>"; };
 		FC07664629C9647600E6BF5D /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		FC07664B29C96CF800E6BF5D /* CustomTablBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTablBarController.swift; sourceTree = "<group>"; };
 		FC108E2929C340EC000DB3A5 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		FC1FF34729D45E8600A0947A /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
+		FC1FF34829D45E8600A0947A /* CartVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartVC.xib; sourceTree = "<group>"; };
 		FC48478129CC720F008631D9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		FCA0EF6E29D3052200DB682B /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		FCA0EF7129D30E8100DB682B /* ItemDetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsVM.swift; sourceTree = "<group>"; };
@@ -150,6 +178,72 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FC07076B29E438D300428BE4 /* OptionsView */ = {
+			isa = PBXGroup;
+			children = (
+				FC07077029E43AE400428BE4 /* OptionsView.swift */,
+				FC07077229E43AFB00428BE4 /* OptionsView.xib */,
+				FC07077629E43E5500428BE4 /* SizesSelectorView */,
+				FC07077829E43E5C00428BE4 /* QuantityView */,
+				FC07077729E43E5900428BE4 /* TextView */,
+			);
+			path = OptionsView;
+			sourceTree = "<group>";
+		};
+		FC07077629E43E5500428BE4 /* SizesSelectorView */ = {
+			isa = PBXGroup;
+			children = (
+				FC07078A29E44D3300428BE4 /* Controller */,
+				FC07078529E4458A00428BE4 /* Cell */,
+			);
+			path = SizesSelectorView;
+			sourceTree = "<group>";
+		};
+		FC07077729E43E5900428BE4 /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				FC07077D29E43EFA00428BE4 /* PIZZATextView.swift */,
+				FC07077F29E43F0F00428BE4 /* PIZZATextView.xib */,
+			);
+			path = TextView;
+			sourceTree = "<group>";
+		};
+		FC07077829E43E5C00428BE4 /* QuantityView */ = {
+			isa = PBXGroup;
+			children = (
+				FC07077929E43E7600428BE4 /* QuantityView.swift */,
+				FC07077B29E43E8500428BE4 /* QuantityView.xib */,
+			);
+			path = QuantityView;
+			sourceTree = "<group>";
+		};
+		FC07078529E4458A00428BE4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FC07078629E445BD00428BE4 /* SizeItemCell.swift */,
+				FC07078729E445BD00428BE4 /* SizeItemCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FC07078A29E44D3300428BE4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC07078B29E44D5700428BE4 /* ViewModel */,
+				FC07078129E43F3600428BE4 /* SizesSelectorView.swift */,
+				FC07078329E43F7D00428BE4 /* SizesSelectorView.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FC07078B29E44D5700428BE4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FC07078C29E44D7400428BE4 /* SizesSelectorVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		FC07664829C96C2800E6BF5D /* CustomTabBare */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +251,15 @@
 				FC07664B29C96CF800E6BF5D /* CustomTablBarController.swift */,
 			);
 			path = CustomTabBare;
+			sourceTree = "<group>";
+		};
+		FC1FF34629D45E6900A0947A /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				FC1FF34729D45E8600A0947A /* CartVC.swift */,
+				FC1FF34829D45E8600A0947A /* CartVC.xib */,
+			);
+			path = Cart;
 			sourceTree = "<group>";
 		};
 		FC48477F29CC6B83008631D9 /* RatingView */ = {
@@ -212,12 +315,14 @@
 		FCF704D029C6710D00DD4087 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				FC07076B29E438D300428BE4 /* OptionsView */,
+				FC48477F29CC6B83008631D9 /* RatingView */,
 				FC48478029CC6B92008631D9 /* Coordinator */,
 				FC48478429CC7392008631D9 /* NavigatorProtocol */,
 				FC48478329CC7378008631D9 /* Navicators */,
-				FC48477F29CC6B83008631D9 /* RatingView */,
 				FC07664829C96C2800E6BF5D /* CustomTabBare */,
 				FCBDDDB829CC8AD8001222F0 /* BaseWireframe.swift */,
+				FC07077429E43C2F00428BE4 /* NibLoadingView.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -277,6 +382,7 @@
 		FCFDADF429BFDFE200E76DE9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FC1FF34629D45E6900A0947A /* Cart */,
 				FCE8C72629D1BFBC00D5AA8C /* ItemDetails */,
 				FCFDADF629BFE00000E76DE9 /* Home */,
 			);
@@ -442,12 +548,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC07077C29E43E8500428BE4 /* QuantityView.xib in Resources */,
 				FCE8C72A29D1BFE900D5AA8C /* ItemDetailsVC.xib in Resources */,
+				FC07078429E43F7D00428BE4 /* SizesSelectorView.xib in Resources */,
 				FCFDADCD29BFD3CF00E76DE9 /* LaunchScreen.storyboard in Resources */,
 				FCFDADF329BFD79600E76DE9 /* HomeVC.xib in Resources */,
+				FC1FF34A29D45E8600A0947A /* CartVC.xib in Resources */,
 				FCF704D629C682DC00DD4087 /* PopularCell.xib in Resources */,
+				FC07078029E43F0F00428BE4 /* PIZZATextView.xib in Resources */,
 				FCFDADFB29BFE06600E76DE9 /* SliderCell.xib in Resources */,
 				FCFDADCA29BFD3CF00E76DE9 /* Assets.xcassets in Resources */,
+				FC07077329E43AFB00428BE4 /* OptionsView.xib in Resources */,
+				FC07078929E445BD00428BE4 /* SizeItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,14 +690,22 @@
 				FCBDDDB729CC79B3001222F0 /* MainNavigator.swift in Sources */,
 				FC48478229CC720F008631D9 /* AppCoordinator.swift in Sources */,
 				FCA0EF7229D30E8100DB682B /* ItemDetailsVM.swift in Sources */,
+				FC07077529E43C2F00428BE4 /* NibLoadingView.swift in Sources */,
+				FC07077129E43AE400428BE4 /* OptionsView.swift in Sources */,
 				FCF704D229C6714700DD4087 /* tableView+Extention.swift in Sources */,
 				FCBDDDB929CC8AD8001222F0 /* BaseWireframe.swift in Sources */,
 				FCFDADF229BFD79600E76DE9 /* HomeVC.swift in Sources */,
+				FC1FF34929D45E8600A0947A /* CartVC.swift in Sources */,
+				FC07077E29E43EFA00428BE4 /* PIZZATextView.swift in Sources */,
 				FCA0EF6F29D3052200DB682B /* Product.swift in Sources */,
 				FCBDDDB529CC7920001222F0 /* Navigator.swift in Sources */,
 				FC07664729C9647600E6BF5D /* CustomTabBar.swift in Sources */,
 				FCFDADFD29BFE1FB00E76DE9 /* collectionView+Extention.swift in Sources */,
+				FC07077A29E43E7600428BE4 /* QuantityView.swift in Sources */,
+				FC07078829E445BD00428BE4 /* SizeItemCell.swift in Sources */,
+				FC07078229E43F3600428BE4 /* SizesSelectorView.swift in Sources */,
 				FC07664C29C96CF800E6BF5D /* CustomTablBarController.swift in Sources */,
+				FC07078D29E44D7400428BE4 /* SizesSelectorVM.swift in Sources */,
 				FC108E2A29C340EC000DB3A5 /* HomeVM.swift in Sources */,
 				FCFDADFF29BFE58D00E76DE9 /* UIView+Extentions.swift in Sources */,
 				FCFDAE0329BFED7C00E76DE9 /* RatingView.swift in Sources */,
