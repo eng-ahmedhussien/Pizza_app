@@ -19,7 +19,18 @@ class SizeItemCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+       // self.backgroundColor = .red
         // Initialization code
+       // setCellAsUnSelected()
     }
 
+    
+//    func setCellAsUnSelected(){
+//        containerView.layer.borderColor = unSelectedColor.cgColor
+//        checkMarkView.isHidden = true
+//        img.image = #imageLiteral(resourceName: "PizzaUnSelected")
+//        mainLabel.textColor = unSelectedColor
+//        descLabel.textColor = unSelectedColor
+//        priceLabel.textColor = unSelectedColor
+//    }
 }

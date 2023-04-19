@@ -47,7 +47,7 @@ class HomeVC: UIViewController {
         
         homeVM.navigateToItemDetails.subscribe { [weak self ] (product) in
             guard let self = self else {return}
-            self.coordinator.mainNavigator.navigate(to: .ItemDetails(Product: product), with: .present)
+            self.coordinator.mainNavigator.navigate(to: .ItemDetails(Product: product), with: .push)
         }.disposed(by: disposeBag)
         
     }
@@ -64,6 +64,7 @@ class HomeVC: UIViewController {
         popularTableView.rx.itemSelected.subscribe { [weak self] (indexSelected) in
             guard let self = self, let indexSelected = indexSelected.element else { return}
             self.homeVM.didselctedIndex(indexSelected: indexSelected)
+            
         }.disposed(by: disposeBag)
         
         //ui

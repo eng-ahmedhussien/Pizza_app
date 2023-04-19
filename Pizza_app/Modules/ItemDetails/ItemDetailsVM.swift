@@ -6,7 +6,18 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
+
 
 class ItemDetailsVM{
+    
+    let product: Product
+    var displayMainData =  PublishSubject<Product>()
+    
+    init(product: Product) {
+        self.product = product
+    }
+    
     
 }

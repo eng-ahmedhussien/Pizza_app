@@ -12,4 +12,5 @@ import RxCocoa
 import RxSwift
 
 class SizesSelectorVM : NibLoadingView{
+    
 }

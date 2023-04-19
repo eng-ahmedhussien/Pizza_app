@@ -25,26 +25,38 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdG-yZ-Zal">
                             <rect key="frame" x="0.0" y="0.0" width="281.33333333333331" height="130"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="-"/>
+                            <buttonConfiguration key="configuration" style="plain" title="-">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                            </buttonConfiguration>
                             <connections>
                                 <action selector="PresMinus:" destination="-1" eventType="touchUpInside" id="y9y-va-YW5"/>
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qA5-9s-kJN">
                             <rect key="frame" x="281.33333333333337" y="0.0" width="281.33333333333337" height="130"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6r-YG-PSJ">
                             <rect key="frame" x="562.66666666666663" y="0.0" width="281.33333333333337" height="130"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="+"/>
+                            <buttonConfiguration key="configuration" style="plain" title="+">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                            </buttonConfiguration>
                             <connections>
                                 <action selector="PresPlus:" destination="-1" eventType="touchUpInside" id="ReL-Ep-vkC"/>
                             </connections>
                         </button>
                     </subviews>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="0.10000000000000001"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

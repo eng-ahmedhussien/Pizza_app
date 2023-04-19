@@ -13,91 +13,91 @@
             <connections>
                 <outlet property="PIZZATextView" destination="L6e-7X-pPv" id="26e-Eo-hNe"/>
                 <outlet property="QuantityView" destination="EKw-Ly-3HO" id="NcB-RP-0Q9"/>
-                <outlet property="SizeView" destination="1ZW-YP-HHD" id="Dn8-et-g5v"/>
+                <outlet property="SizeView" destination="1ZW-YP-HHD" id="MOq-bY-fTy"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="602" height="839"/>
+            <rect key="frame" x="0.0" y="0.0" width="602" height="733"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JUM-AL-iwP">
-                    <rect key="frame" x="0.0" y="59.000000000000014" width="602" height="170.33333333333337"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="awh-fE-nNt">
+                    <rect key="frame" x="0.0" y="59" width="602" height="640"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dh-Mb-aGI">
-                            <rect key="frame" x="0.0" y="0.0" width="602" height="20.333333333333332"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ZW-YP-HHD">
-                            <rect key="frame" x="0.0" y="20.333333333333329" width="602" height="150"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="150" id="0na-Xq-9g5"/>
-                            </constraints>
-                        </view>
-                    </subviews>
-                </stackView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="571-PC-9j7">
-                    <rect key="frame" x="0.0" y="239.33333333333334" width="602" height="40.333333333333343"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rg1-px-9Qi">
-                            <rect key="frame" x="0.0" y="0.0" width="602" height="20.333333333333332"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EKw-Ly-3HO" customClass="QuantityView" customModule="Pizza_app" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="20.333333333333343" width="602" height="20"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="20" id="dLW-Zc-yq8"/>
-                            </constraints>
-                        </view>
-                    </subviews>
-                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </stackView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="avg-4d-gpI">
-                    <rect key="frame" x="0.0" y="289.66666666666669" width="602" height="515.33333333333326"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1C-5z-6Fz">
-                            <rect key="frame" x="0.0" y="0.0" width="602" height="25"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="25" id="s9k-Bi-gQM"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L6e-7X-pPv" customClass="PIZZATextView" customModule="Pizza_app" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="24.999999999999972" width="602" height="490.33333333333326"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JUM-AL-iwP">
+                            <rect key="frame" x="0.0" y="0.0" width="602" height="184"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dh-Mb-aGI">
+                                    <rect key="frame" x="0.0" y="0.0" width="602" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ZW-YP-HHD" customClass="SizesSelectorView" customModule="Pizza_app" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="24" width="602" height="160"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="160" id="oRo-3D-WW8"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="571-PC-9j7">
+                            <rect key="frame" x="0.0" y="189" width="602" height="54"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quntity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rg1-px-9Qi">
+                                    <rect key="frame" x="0.0" y="0.0" width="602" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EKw-Ly-3HO" customClass="QuantityView" customModule="Pizza_app" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="24" width="602" height="30"/>
+                                    <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                    <color key="tintColor" red="0.06483972818" green="0.1243011728" blue="0.1843214631" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="1EW-sa-2uu"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="avg-4d-gpI">
+                            <rect key="frame" x="0.0" y="248" width="602" height="392"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1C-5z-6Fz">
+                                    <rect key="frame" x="0.0" y="0.0" width="602" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L6e-7X-pPv" customClass="PIZZATextView" customModule="Pizza_app" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="24" width="602" height="368"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                            </subviews>
+                        </stackView>
                     </subviews>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="avg-4d-gpI" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="2vO-Ee-MqI"/>
-                <constraint firstItem="571-PC-9j7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="FGz-Tt-UoG"/>
-                <constraint firstItem="avg-4d-gpI" firstAttribute="top" secondItem="571-PC-9j7" secondAttribute="bottom" constant="10" id="YeT-65-6vs"/>
-                <constraint firstItem="571-PC-9j7" firstAttribute="top" secondItem="JUM-AL-iwP" secondAttribute="bottom" constant="10" id="air-fe-FBD"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JUM-AL-iwP" secondAttribute="trailing" id="lcd-Xp-LgL"/>
-                <constraint firstItem="JUM-AL-iwP" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="pCV-ps-jvh"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="571-PC-9j7" secondAttribute="trailing" id="rhw-1L-ow2"/>
-                <constraint firstItem="avg-4d-gpI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="s2t-Ak-8zZ"/>
-                <constraint firstItem="avg-4d-gpI" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="vAh-O6-NOc"/>
-                <constraint firstItem="JUM-AL-iwP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="wDt-bW-86r"/>
+                <constraint firstItem="awh-fE-nNt" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="5K2-EJ-eUB"/>
+                <constraint firstItem="awh-fE-nNt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="A5S-nS-mlH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="awh-fE-nNt" secondAttribute="bottom" id="W6p-HE-z2P"/>
+                <constraint firstItem="awh-fE-nNt" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="qXV-Oi-2VW"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="215.26717557251908" y="50.352112676056343"/>
+            <point key="canvasLocation" x="205" y="-69"/>
         </view>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

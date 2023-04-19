@@ -10,7 +10,9 @@ import UIKit
 
 class OptionsView :NibLoadingView {
     
-    @IBOutlet weak var SizeView: UIView!
+    
+    @IBOutlet weak var SizeView: SizesSelectorView!
+    
     @IBOutlet weak var QuantityView: QuantityView!
     @IBOutlet weak var PIZZATextView: PIZZATextView!
     
